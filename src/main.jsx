@@ -11,8 +11,10 @@ import {
 import { QueryClient, QueryClientProvider, useQuery } from 'react-query'
 import Error from './Component/Shared/Error/Error';
 import Home from './Component/Pages/Home/Home';
-import AuthProvider from './Providers/AuthProvider.jsx';
-
+import AuthProvider from './Component/Providers/AuthProvider.jsx';
+import Login from './Component/Login/Login.jsx';
+import Register from './Component/Regestasion/Register.jsx';
+import Terms from './Component/Pages/Terms/Terms';
 
 
 
@@ -26,7 +28,21 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home/>,
-      },
+ },
+
+ {
+  path: "login",
+  element: <Login/>,
+},
+{
+  path: "signUp",
+  element: <Register></Register>,
+},
+{
+  path: "terms",
+  element:<Terms></Terms>
+},
+
     ],
   },
 ]);
@@ -35,7 +51,7 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
 
-    <AuthProvider>
+<AuthProvider>
       <QueryClientProvider client={queryClient}>
  <RouterProvider router={router} />
  </QueryClientProvider>

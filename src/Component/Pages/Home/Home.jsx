@@ -7,6 +7,8 @@ import { useCallback } from "react";
 import KeySuccess from './Key to success/KeySuccess';
 import Contact from './Contact/Contact';
 import AboutUs from '../AnoutUs/AboutUs';
+import { Link } from 'react-scroll';
+import {FaArrowUp} from 'react-icons/fa';
 const Home = () => {
     useTitle("Home")
 
@@ -14,6 +16,8 @@ const Home = () => {
         window.scrollTo(0, 0);
     }, []);
 
+
+    // for   bg  animation
     const particlesInit = useCallback(async engine => {
         await loadFull(engine);
       }, []);
@@ -21,26 +25,28 @@ const Home = () => {
       const particlesLoaded = useCallback(async container => {
         await console.log(container);
       }, []);
+
+
+
       
     return (
         < >
 
-<div  
- id="top" 
-className=" bg-cover  shadow bg-center bg-fixed"
-style={{
-  backgroundImage:
-    'url(https://wallpaperaccess.com/full/5432655.png)',}}>
 
-        <div className='overflow-hidden m-5'>
+        <div  id="top" className='overflow-hidden mt-20 m-5'>
    <HowWork></HowWork>
    <KeySuccess></KeySuccess>
    <AboutUs></AboutUs>
    <Contact></Contact>
    </div>
-   </div>
 
 
+   <div className="card-actions justify-center">
+ <Link to="top" smooth={true} duration={1000}><button className="btn btn-warning  hover:btn "><FaArrowUp className=''></FaArrowUp></button></Link> </div>            
+   
+
+
+{/* for   bg  animation */} 
    <Particles
             id="tsparticles"
             init={particlesInit}
