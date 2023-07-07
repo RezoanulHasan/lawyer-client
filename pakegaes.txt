@@ -1,0 +1,43 @@
+  
+
+
+ for payment   =              npm install @stripe/react-stripe-js @stripe/stripe-js   - client side
+                                      npm install stripe                                - serverside
+
+
+
+ mkdir  project name
+cd project name
+npm init -y
+siver side -        npm i express cors mongodb dotenv  
+                             npm install jsonwebtoken
+
+
+react -query   =      npm i react-query
+
+ teact-hook from =      npm install react-hook-form
+fire base              =       npm install firebase  
+  react-scroll=                  npm i react-scroll
+react-loader-spinner=          npm install react-loader-spinner --save
+react-simple-captcha=         npm install react-simple-captcha
+axios =                        npm install axios
+react-icons =                   npm install react-icons --save
+  aos =                         npm install aos --save
+  framer-motion=                   npm install framer-motion
+     react-tabs=                     npm install --save react-tabs
+
+react-toastify=                            npm install --save react-toastifiles
+
+    sweetalert2=                                      npm install sweetalert2
+     lottie-web lottie-react                                    npm install lottie-web lottie-react
+
+           
+                                        
+
+
+  """" "react-tsparticles(animated backgrouNd) 2install =                        npm i react-tsparticles
+                                                                      npm  i    tsparticles
+
+
+    (chose  tsparticles  animation)        https://particles.js.org/samples/
+ (jason ke beautify he convet korta hoba)   https://csvjson.com/json_beautifier    """""
