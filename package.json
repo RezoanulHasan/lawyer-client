@@ -24,6 +24,7 @@
     "react-animated-text": "^0.1.4",
     "react-awesome-reveal": "^4.2.5",
     "react-dom": "^18.2.0",
+    "react-google-recaptcha": "^3.1.0",
     "react-hook-form": "^7.45.1",
     "react-icons": "^4.10.1",
     "react-loader-spinner": "^5.3.4",

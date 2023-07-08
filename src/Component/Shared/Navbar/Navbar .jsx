@@ -106,7 +106,7 @@ const Navbar = () => {
     </div>
     */}
 
-<div className="navbar bg-base-100   fixed z-50  ">
+<div className="navbar bg-black   fixed z-50  ">
   <div className="navbar-start   ">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -128,22 +128,25 @@ const Navbar = () => {
 
       </ul>
     </div>
+    <Fade direction="right">
+    <div className='bg-black flex'>
     <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                 <div className="w-12 rounded-full">
                  <img src="https://i.ibb.co/Tv1gdSN/header.png" alt="" />
                 </div>
               </label>
-              <Fade direction="right">
-    <i style={{  }}  className="  font-mono text-3xl text-red-500 ">Law<span className='text-blue-700'>yer</span> Har<span className='text-blue-700'>ing</span></i>
+           
+    <p style={{  }}  className=" text-3xl text-red-500 ">Lawyer<span className='text-blue-700'></span> <span className='text-blue-700'>Haring</span></p>
+   
+    </div>
     </Fade>
-
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
 
-    <li className="   font-bold"> <ActiveLink to="/" >   <FaHome></FaHome>Home </ActiveLink> </li> 
-    <li className=" text-black font-bold "> <ActiveLink to="/allClass" >All <FaLayerGroup></FaLayerGroup>  classes </ActiveLink> </li> 
-   <li className="font-bold text-black "> <ActiveLink to="/allInstructors" > < FaUserTie></FaUserTie>  Instructors </ActiveLink> </li>
+    <li className=" text-white  font-bold"> <ActiveLink to="/" >   <FaHome></FaHome>Home </ActiveLink> </li> 
+    <li className=" text-white font-bold "> <ActiveLink to="/allClass" >All <FaLayerGroup></FaLayerGroup>  classes </ActiveLink> </li> 
+   <li className="font-bold text-white "> <ActiveLink to="/allInstructors" > < FaUserTie></FaUserTie>  Instructors </ActiveLink> </li>
 
      
     { user?

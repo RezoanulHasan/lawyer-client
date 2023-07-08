@@ -32,9 +32,8 @@ const App = () => {
 <div>{navigation.state === 'loading' && <Spinner></Spinner>  }</div> 
   <div className='min-h-[calc(100vh-136px)]   overflow-hidden'>
 <Outlet></Outlet>
-</div>
 
-{/* for   bg  animation */} 
+{/* for   bg  a
 <Particles
             id="tsparticles"
             init={particlesInit}
@@ -113,11 +112,14 @@ const App = () => {
             }}
         />
 
+
+animation */} 
+
 </div>
 
-
-
 </div>
+</div>
+
 
 
 

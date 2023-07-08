@@ -4,16 +4,23 @@
  for payment   =              npm install @stripe/react-stripe-js @stripe/stripe-js   - client side
                                       npm install stripe                                - serverside
 
+ for Email =(server site)             npm install nodemailer
 
-
+......
  mkdir  project name
 cd project name
 npm init -y
 siver side -        npm i express cors mongodb dotenv  
                              npm install jsonwebtoken
 
+........
 
-react -query   =      npm i react-query
+
+
+
+
+   react-google-recaptcha       npm install --save react-google-recaptcha
+  react -query   =      npm i react-query
 
  teact-hook from =      npm install react-hook-form
 fire base              =       npm install firebase  

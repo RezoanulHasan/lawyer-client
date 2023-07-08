@@ -8,6 +8,12 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from "../Providers/AuthProvider";
 import useTitle from '../../hooks/useTitle';
+import { Fade } from "react-awesome-reveal";
+import Lottie from 'lottie-react';
+import loginred from '../../assets/loginred.json'
+import ReCAPTCHA from "react-google-recaptcha";
+
+
 const auth = getAuth(app);
 
 const Login = () => {
@@ -17,7 +23,7 @@ const Login = () => {
 }, []);
 
   useTitle('Login');
-  const [Disabled,   setDisabled] = useState("");
+  const [recaptchaValue, setRecaptchaValue] = useState('');
   const { signIn, signInWithGoogle, signInWithGithub } = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
@@ -25,12 +31,12 @@ const Login = () => {
   const emailRef = useRef();
   const from = location.state?.from?.pathname || '/';
 
-
-
   const handleLogin = handleSubmit(async (data) => {
     const { email, password } = data;
     try {
-      const result = await signIn(email, password);
+
+    
+     const result = await signIn(email, password);
       const loggedUser = result.user;
       console.log(loggedUser);
       reset();
@@ -39,6 +45,10 @@ const Login = () => {
       toast.success('Sign In successfully. Welcome!', {
         position: toast.POSITION.TOP_CENTER
       });
+ // Reset ReCAPTCHA value
+    setRecaptchaValue('');
+    navigate(from, { replace: true });
+
     } catch (error) {
       console.log(error);
       if (error.code === 'auth/user-not-found') {
@@ -50,6 +60,15 @@ const Login = () => {
       }
     }
   });
+
+
+  // google recaptcha
+  const handleRecaptchaChange = (value) => {   
+    setRecaptchaValue(value);
+  };
+ 
+
+
 
   const handleResetPassword = () => {
     const email = emailRef.current.value;
@@ -128,22 +147,24 @@ const Login = () => {
 
 <>
 
-<div className='flex justify-between mt-20'>
+<div className='flex lg:flex-row flex-col  mt-20'>
 
-<div>
+<div className='lg:mt-20 md:mt-20 mt-0'>
 
-  <h1 className='text-white'>ssss</h1>
+<Fade direction="down" >  
+<Lottie  className='login-red'      animationData={loginred} loop={true} />
+</Fade>
 </div>
 
 
-
-    <div className="flex items-center m-10   justify-center min-h-screen ">
+<Fade direction="down" > 
+    <div className="flex items-center mx-20  justify-center min-h-screen ">
       <div className="  p-8 rounded shadow-md">
-        <h2 className="text-2xl font-bold mb-6 text-center">Log In</h2>
+        <h2 className="text-2xl font-bold mb-6  font-mono text-yellow-400 text-center">Log-In</h2>
         <form onSubmit={handleLogin}>
 
           <div className="mb-4">
-            <label htmlFor="email" className=" font-bold mb-2">
+            <label htmlFor="email" className="text-white  font-bold mb-2">
               Email Address
             </label>
 
@@ -160,7 +181,7 @@ const Login = () => {
             {errors.email && <div className="text-white">{errors.email.message}</div>}
           </div>
           <div className="mb-4">
-            <label htmlFor="password" className=" font-bold mb-2">
+            <label htmlFor="password" className="text-white  font-bold mb-2">
               Password
             </label>
             <input
@@ -176,26 +197,39 @@ const Login = () => {
             {errors.password && <div className="text-white">{errors.password.message}</div>}
           </div>
 
-  
+          <div className="mb-4">
+  <label htmlFor="recaptcha" className="text-white font-bold mb-2">
+    
+  </label>
+  <ReCAPTCHA
+    sitekey="6LfpBAUnAAAAABVq7R5zig2JB-aVo2yOAfM1NHhy"
+    onChange={handleRecaptchaChange}
+  />
+
+</div>
+   
+
+
           <div className="flex justify-between items-center mb-4">
             <button
               type="button"
               onClick={handleResetPassword}
-              className="text-sm  font-bold  text-black hover:underline focus:outline-none"
+              className="text-sm  font-bold  text-white  hover:underline focus:outline-none"
             >
-              Forgot password?
+              Forgot password click here?
             </button>
+
             <button
               type="submit"
-              disabled={!isValid}
-              className=" bg-black hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              
+              className="btn btn-outline btn-warning text-white font-bold py-2 px-4 "
             >
               Log In
             </button>
           </div>
         </form>
         <div className="text-center">
-          <p className="font-bold  text-black">or log in with</p>
+          <p className="font-bold  text-white  ">or log in with</p>
           <div className="flex justify-center mt-2">
             <button
               onClick={handleGoogleSignIn}
@@ -211,17 +245,20 @@ const Login = () => {
             </button>
           </div>
           
-          <p className="mt-4 font-bold text-sm">
+          <p className="mt-4 font-bold   text-green-500 text-xl">
             Don't have an account?{' '}
-            <Link to="/signUp" className="text-black font-bold hover:underline focus:outline-none">
+            <Link to="/signUp" className="font-bold hover:underline  text-yellow-400  text-xl focus:outline-none">
               Sign up
             </Link>
           </p>
         </div>
       </div>
-      <ToastContainer />
+     
     </div>
+    </Fade>
+    <ToastContainer />
     </div>
+
     </>
   );
 };

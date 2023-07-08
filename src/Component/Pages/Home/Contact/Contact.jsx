@@ -55,7 +55,7 @@ const Contact = () => {
 
 <div className='  flex justify-between  flex-col lg:flex-row   '    >
 <div  className=' lg:w-1/2 w-full   mt-14 '>
-<Fade direction="right" >  
+<Fade direction="down" >  
 <Lottie  className=''      animationData={contact} loop={true} />
 </Fade>
 </div>

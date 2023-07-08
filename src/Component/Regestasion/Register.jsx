@@ -93,15 +93,15 @@ const Register = () => {
     <>
       <div className="m-5 mt-20">
       
-        <div className="min-h-screen flex items-center justify-center b">
+        <div className="min-h-screen flex items-center justify-center ">
 
-          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
+          <div className="max-w-md w-full  shadow-lg rounded-lg p-6">
             <form onSubmit={handleSubmit(onSubmit)} className="w-full max-w-md mx-auto">
-              <h2 className="text-center text-black text-3xl font-bold mb-4">Register</h2>
+              <h2 className="text-center text-yellow-500 text-3xl font-bold mb-4">Register</h2>
 
               {/* Name field */}
               <div className="mb-4">
-                <label htmlFor="name" className="block mb-2 text-black">
+                <label htmlFor="name" className="block mb-2 text-green-500">
                   Name <span className="text-red-500">*</span>
                 </label>
                 <input
@@ -129,7 +129,7 @@ const Register = () => {
 
               {/* Email field */}
               <div className="mb-4">
-                <label htmlFor="email" className="block mb-2 text-black">
+                <label htmlFor="email" className="block mb-2 text-yellow-500">
                   Email <span className="text-red-500">*</span>
                 </label>
                 <input
@@ -153,7 +153,7 @@ const Register = () => {
 
               {/* Phone field */}
               <div className="mb-4">
-                <label htmlFor="phone" className="block mb-2 text-black  ">
+                <label htmlFor="phone" className="block mb-2 text-green-500">
                   Phone <span className="text-red-500">*</span>
                 </label>
                 <input
@@ -177,7 +177,7 @@ const Register = () => {
 
               {/* photoURL field */}
               <div className="mb-4">
-                <label htmlFor="photoURL" className="block mb-2 text-black  ">
+                <label htmlFor="photoURL" className="block mb-2  text-yellow-500 ">
                   PhotoURL <span className="text-red-500">*</span>
                 </label>
                 <input
@@ -201,7 +201,7 @@ const Register = () => {
 
               {/* Password field */}
               <div className="mb-4">
-                <label htmlFor="password" className="block mb-2 text-black ">
+                <label htmlFor="password" className="block mb-2 text-green-500">
                   Password <span className="text-red-500">*</span>
                 </label>
                 <input
@@ -230,7 +230,7 @@ const Register = () => {
 
               {/* Confirm Password field */}
               <div className="mb-4">
-                <label htmlFor="confirmPassword" className="block mb-2 text-black ">
+                <label htmlFor="confirmPassword" className="block mb-2  text-yellow-500">
                   Confirm Password <span className="text-red-500">*</span>
                 </label>
                 <input
@@ -258,7 +258,7 @@ const Register = () => {
                 <button
                   type="submit"
             
-                  className={`bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700  ${
+                  className={`btn btn-outline btn-warning text-white py-2 px-4 rounded  ${
                     !accepted ? "disabled:opacity-50 cursor-not-allowed" : ""
                   }`}
                 >

@@ -15,10 +15,13 @@ import AuthProvider from './Component/Providers/AuthProvider.jsx';
 import Login from './Component/Login/Login.jsx';
 import Register from './Component/Regestasion/Register.jsx';
 import Terms from './Component/Pages/Terms/Terms';
+import Dashbord from './Component/Dashbord/Dashbord.jsx';
+import AllUsers from './Component/Dashbord/Admin/AllUsers.jsx';
 
 
 
 const queryClient = new QueryClient()
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -45,7 +48,49 @@ const router = createBrowserRouter([
 
     ],
   },
+
+
+  {
+    path: "dashboard",
+    element:<Dashbord></Dashbord>,
+    errorElement: <Error/>,
+    children: [
+
+      //admin
+      {
+        path: "allUser",
+        element: <AllUsers></AllUsers>,
+ },
+
+  //lawyer
+
+ {
+  path: "lawyerInfo",
+  element: ,
+},
+{
+  path: "signUp",
+  element: <Register></Register>,
+},
+{
+  path: "terms",
+  element:<Terms></Terms>
+},
+
+    ],
+  },
+
+
+
+
+
+
 ]);
+
+
+
+
+
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
