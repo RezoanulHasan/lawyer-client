@@ -9,6 +9,7 @@ import Contact from './Contact/Contact';
 import AboutUs from '../AnoutUs/AboutUs';
 import { Link } from 'react-scroll';
 import {FaArrowUp} from 'react-icons/fa';
+import LawyerList from './LawyerList/LawyerList';
 const Home = () => {
     useTitle("Home")
 
@@ -34,6 +35,7 @@ const Home = () => {
 
 
         <div  id="top" className='overflow-hidden mt-20 m-5'>
+       <LawyerList></LawyerList>     
    <HowWork></HowWork>
    <KeySuccess></KeySuccess>
    <AboutUs></AboutUs>

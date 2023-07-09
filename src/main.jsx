@@ -17,6 +17,11 @@ import Register from './Component/Regestasion/Register.jsx';
 import Terms from './Component/Pages/Terms/Terms';
 import Dashbord from './Component/Dashbord/Dashbord.jsx';
 import AllUsers from './Component/Dashbord/Admin/AllUsers.jsx';
+import AddLawyerInfo from './Component/Dashbord/Lawyer/AddLawyerInfo.jsx';
+import SingleLawyerInfo from './Component/Dashbord/Lawyer/SingleLawyerInfo.jsx';
+import LawyerList from './Component/Pages/Home/LawyerList/LawyerList.jsx';
+import PrivateRoute from './Route/PrivetRoute/PrivetRoute.jsx';
+import LawyerDeatils from './Component/Pages/Home/LawyerDeatils/LawyerDeatils.jsx';
 
 
 
@@ -46,6 +51,21 @@ const router = createBrowserRouter([
   element:<Terms></Terms>
 },
 
+{
+  path: "lawyer",
+  element:<LawyerList></LawyerList>,
+  loader: () => fetch('http://localhost:5000/lawyers'),
+
+},
+
+{
+  path:  "/lawyer/view/:id",
+ element:  <PrivateRoute><LawyerDeatils></LawyerDeatils></PrivateRoute>  ,
+ loader: ({params}) => fetch(`http://localhost:5000/lawyers/${params.id}`),
+  },
+  
+
+
     ],
   },
 
@@ -65,12 +85,12 @@ const router = createBrowserRouter([
   //lawyer
 
  {
-  path: "lawyerInfo",
-  element: ,
+  path: "addLawyerInfo",
+  element:<AddLawyerInfo></AddLawyerInfo> ,
 },
 {
-  path: "signUp",
-  element: <Register></Register>,
+  path: "LawyerInfo",
+  element: <SingleLawyerInfo></SingleLawyerInfo>,
 },
 {
   path: "terms",
