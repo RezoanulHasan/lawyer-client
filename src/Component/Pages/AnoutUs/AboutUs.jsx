@@ -10,9 +10,9 @@ const AboutUs = () => {
             
         <Fade direction="left">
       <div className="our-team card w-full h-full  ">
-    <div className="card-body"> 
+    <div className="card-body text-white"> 
     <h3 className="title">problem</h3>
-    <p className="post"> There is a rise in the amount of crime in our country and most of the people are unaware of the criminal laws under Supreme Court for Bangladesh. To escape from the hands of criminals and to get proper justice. It is very important that a person can get justice by hiring a qualified lawyer.</p>			
+    <p className=" text-white "> There is a rise in the amount of crime in our country and most of the people are unaware of the criminal laws under Supreme Court for Bangladesh. To escape from the hands of criminals and to get proper justice. It is very important that a person can get justice by hiring a qualified lawyer.</p>			
     
                 </div>  </div>
 
@@ -33,9 +33,9 @@ const AboutUs = () => {
                 <Fade direction="right">
     <div className="our-team card w-full h-full   ">
 
-                    <div className="card-body">      
-                    <h3 className="title">Our Vission  </h3>
-                    <span className="post">Live Conversation and online hiring system. Digital payment processing system. Advanced analysis and tracking. Secure client and lawyer information Better relation management.
+<div className="card-body">      
+<h3 className="title">Our Vission  </h3>
+ <span className="text-red-300">Live Conversation and online hiring system. Digital payment processing system. Advanced analysis and tracking. Secure client and lawyer information Better relation management.
 
 </span>				 
 

@@ -16,9 +16,9 @@ siver side -        npm i express cors mongodb dotenv
 ........
 
 
-
-
-
+         react-type-annimation                   npm install react-type-animation
+       react-marquee                npm install react-fast-marquee --save
+    react-tab                       npm install --save react-tabs
    react-google-recaptcha       npm install --save react-google-recaptcha
   react -query   =      npm i react-query
 

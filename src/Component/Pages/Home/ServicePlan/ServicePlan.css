@@ -1,0 +1,78 @@
+.serviceBox{
+    color:#ffffff;
+    background: #000000;	
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding: 0 0 55px;
+    margin: 0 auto;
+    position: relative;
+	
+	
+}
+
+.serviceBox:after{
+    content: "";
+    background: #ffe600  ;
+    width: 15px;
+    height:15px;
+    transform: translateX(-50%) rotate(45deg);
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+}
+.serviceBox .service-icon{
+    background:	#825500 ;
+    font-size: 60px;
+    padding: 20px 0;
+    margin: 0 0 60px;
+    border-bottom: 15px solid #fff;
+    position: relative;
+}
+.serviceBox .service-icon:before,
+.serviceBox .service-icon:after{
+    content: "";
+    background: linear-gradient(to top left, #fff 49%, transparent 50%);
+    width: 50px;
+    height: 50px;
+    transform: translateX(-50%) rotate(45deg);
+    position: absolute;
+    bottom: -39px;
+    left: 50%;
+}
+.serviceBox .service-icon:after{
+    background: #FF8C00  ;
+    width: 45px;
+    height: 45px;
+    bottom: -21px;
+}
+.serviceBox .title{
+    font-family: 'Oswald', sans-serif;
+    font-size: 23px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin: 0 15px 15px;
+}
+.serviceBox .description{
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    margin: 0 15px;
+}
+.serviceBox.orange{ background: #f99c31; }
+.serviceBox.orange .service-icon,
+.serviceBox.orange .service-icon:after{
+    background: #ff8a05;
+}
+.serviceBox.pink{ background: #FF7271; }
+.serviceBox.pink .service-icon,
+.serviceBox.pink .service-icon:after{
+    background: #F54C4F;
+}
+.serviceBox.purple{ background: #BB4B71; }
+.serviceBox.purple .service-icon,
+.serviceBox.purple .service-icon:after{
+    background: #983B60;
+}
+@media only screen and (max-width: 990px){
+    .serviceBox{ margin: 0 0 30px; }
+}

@@ -1,14 +1,15 @@
-import useAuth from '../../Hooks/useAuth';
-import Spinner from '../../Component/Shared/Spinner/Spinner';
 import { Navigate, useLocation } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import useAuth from '../Hooks/useAuth';
+import Spinner from '../Component/Shared/Spinner/Spinner';
+
 
 const PrivateRoute = ({ children }) => {
-  const { user, loading } = useAuth();
+  const { user, loading } = useAuth(); 
   const location = useLocation();
   if (loading) {
-    return <Spinner></Spinner>
+    return <Spinner></Spinner> 
   }
 
   if (user) {

@@ -10,6 +10,10 @@ import AboutUs from '../AnoutUs/AboutUs';
 import { Link } from 'react-scroll';
 import {FaArrowUp} from 'react-icons/fa';
 import LawyerList from './LawyerList/LawyerList';
+import ServicePlan from './ServicePlan/ServicePlan';
+import CustomerReview from './CustomerReview/CustomerReview';
+import Awards from './Awards/Awards';
+import Banner from './Banner/Banner';
 const Home = () => {
     useTitle("Home")
 
@@ -35,11 +39,27 @@ const Home = () => {
 
 
         <div  id="top" className='overflow-hidden mt-20 m-5'>
-       <LawyerList></LawyerList>     
+
+<Banner></Banner>
+
+<div  id="lawyerList">
+<LawyerList></LawyerList>   
+</div>
+
    <HowWork></HowWork>
    <KeySuccess></KeySuccess>
+   
    <AboutUs></AboutUs>
+
+   <div  id="ServicePlan">
+   <ServicePlan></ServicePlan>
+   </div>
+<div id="Contact" >
    <Contact></Contact>
+   </div>
+
+   <Awards></Awards>
+   <CustomerReview></CustomerReview>
    </div>
 
 

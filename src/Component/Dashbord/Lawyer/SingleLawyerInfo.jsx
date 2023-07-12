@@ -1,23 +1,22 @@
 import React from 'react';
 import useTitle from '../../../hooks/useTitle';
 import useSingleLawyer from '../../../Hooks/useSingleLawyer';
-
 import { Fade } from "react-awesome-reveal";
+
 const SingleLawyerInfo = () => {
     useTitle("Lawyer Profile");
     const [card, refetch] = useSingleLawyer();
 
- 
     return (
-
-        <div className='m-2 mt-12 card-actions justify-center  '> 
-          
-       <div>
+ <div className='m-2 mt-12 card-actions justify-center  '> 
+           <div>
             {card.map((cart) => (
                 <div key={cart.id} className="card w-100 shadow-xl">
-                    <figure>
-                        <img  className ="w-1/2"src={cart.photo} alt="Lawyer" />
-                    </figure>
+                  <figure>
+  <img className="w-80 h-80"src={cart.photo} alt="Lawyer"
+  />
+</figure>
+          
                     <Fade direction="down" > 
                     <div className="card-body text-white">
 

@@ -20,8 +20,10 @@ import AllUsers from './Component/Dashbord/Admin/AllUsers.jsx';
 import AddLawyerInfo from './Component/Dashbord/Lawyer/AddLawyerInfo.jsx';
 import SingleLawyerInfo from './Component/Dashbord/Lawyer/SingleLawyerInfo.jsx';
 import LawyerList from './Component/Pages/Home/LawyerList/LawyerList.jsx';
-import PrivateRoute from './Route/PrivetRoute/PrivetRoute.jsx';
-import LawyerDeatils from './Component/Pages/Home/LawyerDeatils/LawyerDeatils.jsx';
+import Details from './Component/Pages/Home/Deatils/Details .jsx';
+import PrivateRoute from './privetroutes/PrivateRoute.jsx';
+
+
 
 
 
@@ -54,13 +56,11 @@ const router = createBrowserRouter([
 {
   path: "lawyer",
   element:<LawyerList></LawyerList>,
-  loader: () => fetch('http://localhost:5000/lawyers'),
-
 },
 
 {
-  path:  "/lawyer/view/:id",
- element:  <PrivateRoute><LawyerDeatils></LawyerDeatils></PrivateRoute>  ,
+  path:  "/lawyers/view/:id",
+ element:<PrivateRoute><Details></Details></PrivateRoute> ,
  loader: ({params}) => fetch(`http://localhost:5000/lawyers/${params.id}`),
   },
   
