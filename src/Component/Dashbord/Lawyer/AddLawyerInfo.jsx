@@ -1,10 +1,10 @@
 import Swal from 'sweetalert2';
-import 'react-toastify/dist/ReactToastify.css';
 import useTitle from '../../../hooks/useTitle';
 import useAuth from '../../../Hooks/useAuth';
 import useAxiosSecure from '../../../Hooks/useAxiosSecure';
 import { Fade } from "react-awesome-reveal";
 const AddLawyerInfo = () => {
+
     const [axiosSecure] = useAxiosSecure(); 
     const { user} = useAuth();  
     useTitle("Add Lawyer Info");
@@ -60,7 +60,7 @@ const AddLawyerInfo = () => {
       if (data.insertedId) {
         Swal.fire({
           title: 'Success!',
-          text: 'Info Successfully',
+          text: 'Add Info Successfully',
           icon: 'success',
           confirmButtonText: 'Cool',
         });
@@ -74,14 +74,16 @@ const AddLawyerInfo = () => {
         <>
          <Fade direction="down" > 
         <div className="m-10 overflow-hidden">
-        <div className=" p-24"> <h2 className="text-3xl mb-5 text-center text-green-500 font-extrabold">Add Info</h2>
-          <form onSubmit={handleAdd}>      
+        <div className=" p-12"> <h2 className="text-3xl mb-5 text-center text-green-500 font-extrabold">Add Info</h2>
+          <form onSubmit={handleAdd}>  
+
+
         {/* form lawyerName and email row */}
         <div className="md:flex mb-8">
               <div className="form-control md:w-1/2">
-                <label className="label">
-                  <span className="label-text text-yellow-400">Lawyer-Name</span>
-                </label>
+        <label className="label">
+        <span className="label-text text-yellow-400">Lawyer-Name</span>
+          </label>
                 <label className="input-group">
                   <input
                     type="text"
@@ -109,6 +111,11 @@ const AddLawyerInfo = () => {
                 </label>
               </div>
             </div>
+
+
+
+
+
 
 
             {/* form price and category row */}

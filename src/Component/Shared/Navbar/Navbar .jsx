@@ -1,7 +1,7 @@
 import ActiveLink from '../ActiveLink/ActiveLink'
 import { useContext } from 'react';
 import Lottie from 'lottie-react';
-import { FaHome,FaInnosoft, FaLayerGroup, FaUserTie,FaUserShield } from 'react-icons/fa';
+import { FaHome,FaInnosoft, FaLayerGroup, FaUserTie,FaUserShield,FaDatabase} from 'react-icons/fa';
 
 import { FaClock,FaPodcast,FaRegIdBadge} from "react-icons/fa6";
 
@@ -148,7 +148,9 @@ const Navbar = () => {
     <ul className="menu menu-horizontal px-1">
 
     <li className=" text-white  font-bold"> <ActiveLink to="/" >   <FaHome></FaHome>Home </ActiveLink> </li> 
-    <li className=" text-white font-bold "> <ActiveLink to="/allClass" >All <FaLayerGroup></FaLayerGroup>  classes </ActiveLink> </li> 
+    <li className=" text-white font-bold "> 
+    <ActiveLink to="/allClass" ><FaDatabase>
+      </FaDatabase>Our  Services  </ActiveLink> </li> 
 <li className="font-bold text-white "> 
 <Link   to="lawyerList" smooth={true} duration={1000} >< FaUserTie></FaUserTie>Our Lawyers</Link> </li>
 

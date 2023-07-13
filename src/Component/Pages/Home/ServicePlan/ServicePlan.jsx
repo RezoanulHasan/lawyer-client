@@ -7,7 +7,9 @@ const ServicePlan = () => {
         <div>
 
       <Fade direction="down">       
- <h1 className="text-center text-white text-2xl font-bold mt-10" > 💼 Our Employment Law Service Charge Options 💼 </h1>
+ <h1  style={{textShadow: '0 0 3px #FF0000,0 0 4px #FF0000 '}}   className="text-center hero-overlay  text-white text-2xl font-bold mt-10" > 💼 Our Employment Law Service Charge Options 💼 </h1>
+
+
  <h2 className="m-5 text-white text-center mb-5"> We are committed to exceptional client care at Springhouse Solicitors. This includes being open and transparent about our charges and letting you know straight away if they may exceed the estimate.</h2>
 
 

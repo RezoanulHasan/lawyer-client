@@ -50,6 +50,12 @@ const Contact = () => {
 
 <div className='' >
   
+<div  style={{textShadow: '0 0 3px #FF0000,0 0 4px #FF0000 '}}  className='text-center font-bold text-white font-mono hero-overlay mt-10 text-2xl'>
+    <Wave    text="CONTACT-US " effect="stretch" effectChange={2} />  
+  </div>
+
+
+
 <div className="inset-0  opacity-100">
   
 
@@ -64,9 +70,7 @@ const Contact = () => {
 <div className="max-w-full w-full hadow-lg rounded-lg p-6">
        
 
-        <div className='text-center font-bold text-white font-mono  mt-10 text-2xl'>
-    <Wave    text="CONTACT-US " effect="stretch" effectChange={2} />  
-  </div>
+
 
         <Fade direction="down" > 
              <form onSubmit={handleSubmit} className="">

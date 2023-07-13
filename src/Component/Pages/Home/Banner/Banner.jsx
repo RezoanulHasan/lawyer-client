@@ -1,37 +1,63 @@
 import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
-
+import { Fade } from "react-awesome-reveal";
+import Lottie from 'lottie-react';
+import lawyers from '../../../../assets/lawyers.json'
 const Banner = () => {
     return (
         <>
 
-<div className='m-2 flex mt-20 mb-10' >
+<div className='m-2  lg:skew-x-0   md:skew-x-0  skew-x-6  flex   lg:flex-row md-flex-row  flex-col mt-20 mb-10' >
 
-<div>
-<h1>Hire Lawyer Online </h1>
+<div className='  m-4 lg:w-1/2  md:w-1/2 w-full' >
+
+    
+<Fade direction="down"> 
+<h1 className='m-5 lg:m-0  text-white  mb-5 front-bold text-3xl' style={{textShadow: '0 0 3px #FF0000,0 0 4px #FF0000 '}}>
+  Hire <span className='text-white'>Lawyer</span> Online
+</h1>
+
 <TypeAnimation
       sequence={[
         // Same substring at the start will only be typed out once, initially
-        ' Find the Perfect Lawyer for Your Case',
+        'Hire the Perfect Lawyer for Your Case ....',
         1000, // wait 1s before replacing "Mice" with "Hamsters"
-        'Connect with the Best Lawyers in Your Country ',
+        'Hire  with the Best Lawyers ....  ',
+
         1000,
-        'Introducing Myself  as  a MERN-Developer   ',
+        ' Hire the Finest Lawyers Today.... '
+             ,
+    
         1000,
+        ' Hire Elite Lawyers with Ease ....',
+
+   
          
       ]}
       wrapper="span"
       speed={50}
-      style={{ fontSize: '1em', display: 'inline-block', 
-       background: 'pink',  fontFamily: 'font-mono'}}
+      style={{ fontSize: '1.5em', display: 'inline-block', 
+       background: 'black', color:'orange',  fontFamily: 'font-mono'}}
       repeat={Infinity}
     />
+</Fade>
 
+<Fade direction="down"> 
+<h1 className=' text-white bg-black front-bold font-mono mt-5'>Our lawyer hiring website, LawLink, is a comprehensive platform that connects individuals and businesses with top-notch legal professionals. With a user-friendly interface and a vast network of skilled attorneys, we streamline the process of finding and hiring the perfect lawyer for every legal need.</h1>
+</Fade>
 
 </div>
 
 
-<div></div>
+
+
+<div className='lg:w-1/2  md:w-1/2 w-full'> 
+<Fade direction="right"> 
+<Lottie  className='h-80 w-full h- '      animationData={lawyers} loop={true} />
+</Fade>
+
+    
+     </div>
 
     
 </div>

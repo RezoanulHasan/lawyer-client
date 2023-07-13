@@ -22,6 +22,9 @@ import SingleLawyerInfo from './Component/Dashbord/Lawyer/SingleLawyerInfo.jsx';
 import LawyerList from './Component/Pages/Home/LawyerList/LawyerList.jsx';
 import Details from './Component/Pages/Home/Deatils/Details .jsx';
 import PrivateRoute from './privetroutes/PrivateRoute.jsx';
+import AddService from './Component/Dashbord/Admin/AddService/AddService';
+import Service from './Component/Pages/Service/Service.jsx';
+import ServiceDetalis from './Component/Pages/Service/ServiceDetalis';
 
 
 
@@ -54,7 +57,7 @@ const router = createBrowserRouter([
 },
 
 {
-  path: "lawyer",
+  path: "lawyers",
   element:<LawyerList></LawyerList>,
 },
 
@@ -63,6 +66,19 @@ const router = createBrowserRouter([
  element:<PrivateRoute><Details></Details></PrivateRoute> ,
  loader: ({params}) => fetch(`http://localhost:5000/lawyers/${params.id}`),
   },
+
+
+{
+  path: "services",
+  element:<Service></Service>,
+},
+
+  {
+    path:"/services/view/:id",
+   element:<ServiceDetalis></ServiceDetalis> ,
+   loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`),
+    },
+    
   
 
 
@@ -81,6 +97,15 @@ const router = createBrowserRouter([
         path: "allUser",
         element: <AllUsers></AllUsers>,
  },
+
+ {
+  path: "services",
+  element: <AddService></AddService>,
+},
+
+
+
+
 
   //lawyer
 

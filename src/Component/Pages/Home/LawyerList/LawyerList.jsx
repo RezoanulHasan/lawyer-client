@@ -6,6 +6,7 @@ import {  Wave } from 'react-animated-text';
 import { Fade } from "react-awesome-reveal";
 import { motion } from "framer-motion";
 import "../../../Shared/Marquee.css"
+
 const LawyerList = () => {
   const navigate = useNavigate();
   const [lawyers, setLawyers] = useState([]);
@@ -32,7 +33,7 @@ const LawyerList = () => {
     <div className="mt-20  m-10">
  
  <div className="marquee-container">
-      <h1 className=" marquee-text  font-bold text-yellow-400 font-sans text-2xl">⚖️Legal Advice Online From Top Rated Lawyers⚖️  </h1>
+      <h1  style={{textShadow: '0 0 3px #FF0000,0 0 4px #FF0000 '}}   className=  " marquee-text  font-bold text-yellow-100 white font-sans text-2xl">⚖️Legal Advice Online From Top Rated Lawyers⚖️  </h1>
     </div>
 
     <div className="text-white  font-bold text-2xl text-center">

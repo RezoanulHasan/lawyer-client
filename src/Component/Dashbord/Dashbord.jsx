@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
-import { FaUsers ,FaHome,FaWallet,FaUserEdit,FaUserTie} from 'react-icons/fa';
+import { FaUsers ,FaHome,FaWallet,FaUserEdit,FaUserTie,FaDatabase} from 'react-icons/fa';
 import useLawyer from '../../Hooks/useLawyer';
 import useAdmin from './../../Hooks/useAdmin';
 const Dashbord = () => {
@@ -35,6 +35,9 @@ const Dashbord = () => {
             <>
               <li><Link className='text-green-500 text-xl'  to="/dashboard/allUser"> 
       <FaUsers/> All Users</Link></li>
+     
+      <li><Link className='text-green-500 text-xl'  to="/dashboard/services"> 
+      <FaDatabase/> Add service </Link></li>
 
 </>
 )}

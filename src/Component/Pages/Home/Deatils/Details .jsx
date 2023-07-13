@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate, useLoaderData } from 'react-router-dom';
 import { motion } from "framer-motion";
 import { Fade } from "react-awesome-reveal";
 import {  Wave } from 'react-animated-text';
 import Marquee from "react-fast-marquee";
 const LawyerDetails = () => {
-  const { id } = useParams();
+  const { _id } = useParams();
   const navigate = useNavigate();
   const  Lawyers= useLoaderData();
 

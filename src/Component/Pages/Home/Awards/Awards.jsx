@@ -13,7 +13,7 @@ const Awards = () => {
 <>
 
       <Fade direction="down">
-        <h1 className="text-center font-bold text-white font-mono mb-10 mt-10 text-3xl">
+        <h1   style={{textShadow: '0 0 3px #FF0000,0 0 4px #FF0000 '}}    className="text-center hero-overlay font-bold text-white font-mono mb-10 mt-10 text-3xl">
           🏆 Award-Achievement 🏆
         </h1>
       </Fade>

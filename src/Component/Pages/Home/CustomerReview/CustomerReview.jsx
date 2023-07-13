@@ -7,7 +7,7 @@ const CustomerReview = () => {
     return (
         <>
 
-<div className='text-center font-bold text-white font-mono  mb-5 mt-10 text-3xl'>
+<div style={{textShadow: '0 0 3px #FF0000,0 0 4px #FF0000 '}}   className='hero-overlay   text-center font-bold text-white font-mono  mb-5 mt-10 text-3xl'>
     <Wave    text="Customers Review " effect="stretch" effectChange={2} />  
   </div>
 

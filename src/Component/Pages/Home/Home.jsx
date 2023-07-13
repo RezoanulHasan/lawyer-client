@@ -14,6 +14,7 @@ import ServicePlan from './ServicePlan/ServicePlan';
 import CustomerReview from './CustomerReview/CustomerReview';
 import Awards from './Awards/Awards';
 import Banner from './Banner/Banner';
+import Service from '../Service/Service';
 const Home = () => {
     useTitle("Home")
 
@@ -41,7 +42,7 @@ const Home = () => {
         <div  id="top" className='overflow-hidden mt-20 m-5'>
 
 <Banner></Banner>
-
+<Service></Service>
 <div  id="lawyerList">
 <LawyerList></LawyerList>   
 </div>
@@ -60,6 +61,14 @@ const Home = () => {
 
    <Awards></Awards>
    <CustomerReview></CustomerReview>
+
+
+<div className="elfsight-app-6f09478f-298e-40d1-8b1c-971e5d56f862"></div>
+
+
+
+
+
    </div>
 
 
@@ -120,7 +129,7 @@ const Home = () => {
                         direction: "none",
                         enable: true,
                         outModes: {
-                            default: "bounce",
+                            default: "",
                         },
                         random: false,
                         speed: 2,
@@ -140,7 +149,7 @@ const Home = () => {
                         type: "star",
                     },
                     size: {
-                        value: { min: 1, max: 5 },
+                        value: { min: 1, max: 4 },
                     },
                 },
                 detectRetina: true,
