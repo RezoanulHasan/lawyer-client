@@ -38,7 +38,7 @@ const LawyerDetails = () => {
     whileTap={{ scale: 0.8 }}
 > 
         <figure>
-  <img className="lg:object-cover  lg:w-full  w-80 h-80"src={photo} alt="Lawyer"
+  <img className="lg:object-cover    w-80 h-80"src={photo} alt="Lawyer"
   />
 </figure>
 </motion.div>     
@@ -182,8 +182,8 @@ const LawyerDetails = () => {
 
 
                         
-   <div className="card-actions justify-end">
-      <button  className="btn mt-20 btn-outline btn-warning" onClick={handleBack}>Go Back</button>   
+   <div className="card-actions justify-center">
+      <button  className="btn mt-10 btn-outline btn-warning" onClick={handleBack}>Go Back</button>   
       </div>
 
 

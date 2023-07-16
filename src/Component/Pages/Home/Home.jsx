@@ -42,7 +42,9 @@ const Home = () => {
         <div  id="top" className='overflow-hidden mt-20 m-5'>
 
 <Banner></Banner>
+<div  id="service">
 <Service></Service>
+</div>
 <div  id="lawyerList">
 <LawyerList></LawyerList>   
 </div>
@@ -72,8 +74,8 @@ const Home = () => {
    </div>
 
 
-   <div className="card-actions justify-center">
- <Link to="top" smooth={true} duration={1000}><button className="btn btn-warning  hover:btn "><FaArrowUp className=''></FaArrowUp></button></Link> </div>            
+   <div className="card-actions justify-center mb-3">
+ <Link to="top" smooth={true} duration={1000}><button className="btn btn-outline btn-info  "><FaArrowUp className=''></FaArrowUp></button></Link> </div>            
    
 
 

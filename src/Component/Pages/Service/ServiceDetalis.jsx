@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLoaderData, useNavigate } from 'react-router-dom';
+import { Link, useLoaderData, useNavigate } from 'react-router-dom';
 import { motion } from "framer-motion";
 import { Fade } from "react-awesome-reveal";
 import Lottie from 'lottie-react';
@@ -66,8 +66,14 @@ const ServiceDetalis = () => {
 </Fade>
 
 
+<div className="card-actions justify-center">
+      <button  className="btn mt-5 btn-outline btn-info" onClick={handleBack}>Go Back</button>   
+      </div>
 
-
+      <div className="card-actions justify-center">
+<Link  to="/lawyers">
+      <button  className="btn mt-5 btn-outline btn-error">Lawyer List</button>   </Link>
+      </div>
 
     </div>
   );

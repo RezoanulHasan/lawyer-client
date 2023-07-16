@@ -4,9 +4,8 @@ import useAuth from '../../../Hooks/useAuth';
 import useAxiosSecure from '../../../Hooks/useAxiosSecure';
 import { Fade } from "react-awesome-reveal";
 const AddLawyerInfo = () => {
-
-    const [axiosSecure] = useAxiosSecure(); 
-    const { user} = useAuth();  
+ const [axiosSecure] = useAxiosSecure(); 
+ const { user} = useAuth();  
     useTitle("Add Lawyer Info");
   
 
@@ -74,7 +73,7 @@ const AddLawyerInfo = () => {
         <>
          <Fade direction="down" > 
         <div className="m-10 overflow-hidden">
-        <div className=" p-12"> <h2 className="text-3xl mb-5 text-center text-green-500 font-extrabold">Add Info</h2>
+        <div className=" 12"> <h2 className="text-3xl mb-5 text-center text-red-200 font-extrabold">ADD-INF0</h2>
           <form onSubmit={handleAdd}>  
 
 

@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
-import { FaUsers ,FaHome,FaWallet,FaUserEdit,FaUserTie,FaDatabase} from 'react-icons/fa';
+import {FaUsers ,FaHome,FaWallet,FaUserEdit,FaUserTie,FaDatabase} from 'react-icons/fa';
 import useLawyer from '../../Hooks/useLawyer';
 import useAdmin from './../../Hooks/useAdmin';
+import useAuth from '../../Hooks/useAuth';
 const Dashbord = () => {
-
+  const { user} = useAuth();   
   const [isAdmin] = useAdmin();
   const [isLawyer] = useLawyer();
 
@@ -22,7 +23,7 @@ const Dashbord = () => {
     {/* Page content here */}
     <Outlet></Outlet>
   
-    <label htmlFor="my-drawer-2" className="btn btn-primary  drawer-button lg:hidden">Open drawer</label>
+    <label htmlFor="my-drawer-2" className="btn btn-info   drawer-button lg:hidden"> Click  Here</label>
   
   </div> 
   <div className="drawer-side">
@@ -33,20 +34,31 @@ const Dashbord = () => {
 
       {isAdmin && (
             <>
-              <li><Link className='text-green-500 text-xl'  to="/dashboard/allUser"> 
+
+<div className="mt-5 card justify-center rounded-full">
+    <img  className="w-40 h-40" src={user?.photoURL} alt="User profile"title={user?.displayName}  />
+               
+                </div>
+
+              <li><Link className='text-red-200  text-xl'  to="/dashboard/allUser"> 
       <FaUsers/> All Users</Link></li>
      
-      <li><Link className='text-green-500 text-xl'  to="/dashboard/services"> 
+      <li><Link className='text-red-200  text-xl'  to="/dashboard/services"> 
       <FaDatabase/> Add service </Link></li>
 
 </>
 )}
    {isLawyer && (
             <>
-          <li><Link className='text-green-500  '  to="/dashboard/LawyerInfo"> 
+<div className="mt-5 card justify-center rounded-full">
+    <img  className="w-40 h-40" src={user?.photoURL} alt="User profile"title={user?.displayName}  />
+               
+                </div>
+
+          <li><Link className='text-red-200  mt-10'  to="/dashboard/LawyerInfo"> 
       <FaUserTie/> Profile </Link></li> 
   
-  <li><Link className='text-green-500'  to="/dashboard/addLawyerInfo"> 
+  <li><Link className='text-red-200  '  to="/dashboard/addLawyerInfo"> 
       <FaUserEdit/>Add Lawyer info </Link></li>
 
      
@@ -59,26 +71,54 @@ const Dashbord = () => {
 <>
       <div className="divider bg-white "></div>
               <li>
-                <Link  className='text-green-500 text-xl ' to="/">
+                <Link  className='text-yellow-300 text-xl ' to="/">
                   <FaHome></FaHome> Home
                 </Link>
+
+                <li>
+
+<Link  className='text-red-200 text- ' to="/services" ><FaDatabase>
+</FaDatabase>Our  Services  </Link> 
+</li> 
+
+<li > 
+<Link  className='text-red-200 ' to="/lawyers"  >< FaUserTie></FaUserTie>Our Lawyers</Link> </li>
+
               </li>
 
 </>
 ) : 
 <>
+
+    <div className="mt-10 card  justify-center  rounded-full">
+    <img className='w-40 h-40 'src={user?.photoURL} alt="User profile"title={user?.displayName}  />
+               
+                </div>
+      
 <li>
-<Link className='text-green-500 '   to="/dashboard/mycart">
-  <FaWallet></FaWallet>My Classes
+<Link className='text-red-200  mt-10'   to="/dashboard/userInfo">
+  <FaWallet></FaWallet>My Profile
 </Link>
 </li>
 
 <div className="divider bg-white "></div>
               <li>
-                <Link  className='text-green-500 text-xl ' to="/">
+                <Link  className='text-red-200 text-xl ' to="/">
                   <FaHome></FaHome> Home
                 </Link>
               </li>
+
+       <li>
+
+       <Link  className='text-red-200 text- ' to="/services" ><FaDatabase>
+      </FaDatabase>Our  Services  </Link> 
+      </li> 
+
+<li > 
+<Link  className='text-red-200 ' to="/lawyers"  >< FaUserTie></FaUserTie>Our Lawyers</Link> </li>
+
+
+
 
 </>          
 

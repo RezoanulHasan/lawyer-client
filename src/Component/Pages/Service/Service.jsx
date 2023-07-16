@@ -24,14 +24,14 @@ const Service = () => {
   };
 
   return (
-    <div className='m-2 mb-20 mt-10'>
+    <div className='m-5 mb-20 mt-10'>
         <Fade direction="left" > 
       <div  style={{textShadow: '0 0 3px #FF0000,0 0 4px #FF0000 '}}   className="text-white     hero-overlay  font-bold text-3xl mt-10 text-center">
         <Wave text="Our Service"   effect="stretch" effectChange={2} />
       
       </div>
       </Fade> 
-      <Fade direction="down" > 
+      <Fade direction="right" > 
       <div className="grid  mt-10 gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3  ">      
         {services.map((service) => (
           <div key={service._id} className="card  rotate-12  h-full bg-black shadow-xl">

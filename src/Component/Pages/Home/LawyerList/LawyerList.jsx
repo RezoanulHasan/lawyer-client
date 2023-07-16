@@ -31,8 +31,8 @@ const LawyerList = () => {
 
   return (
     <div className="mt-20  m-10">
- 
- <div className="marquee-container">
+ <h1 className='mt-20' >.</h1>
+ <div className="marquee-container mt-20 mb-10">
       <h1  style={{textShadow: '0 0 3px #FF0000,0 0 4px #FF0000 '}}   className=  " marquee-text  font-bold text-yellow-100 white font-sans text-2xl">⚖️Legal Advice Online From Top Rated Lawyers⚖️  </h1>
     </div>
 

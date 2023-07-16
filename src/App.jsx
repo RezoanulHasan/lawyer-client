@@ -5,6 +5,7 @@ import Navbar from './Component/Shared/Navbar/Navbar ';
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import { useCallback } from "react";
+import Footer from './Component/Shared/Footer/Footer';
 const App = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -116,6 +117,9 @@ const App = () => {
 animation */} 
 
 </div>
+
+<Footer></Footer>
+
 
 </div>
 </div>

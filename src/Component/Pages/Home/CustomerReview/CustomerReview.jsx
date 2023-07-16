@@ -12,7 +12,7 @@ const CustomerReview = () => {
   </div>
 
   <Marquee speed={200}>
-        <div className='m-0 lg:m-1 gap-3  grid lg:grid-cols-6 md:grid-cols-6   grid-cols-1'>
+        <div className='m-0 lg:m-1 gap-3  grid   grid-cols-6    '>
     <div className='box  card w-96  bg-black'>
 
         <i className="fas fa-quote-left quote"></i>

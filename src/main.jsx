@@ -25,6 +25,7 @@ import PrivateRoute from './privetroutes/PrivateRoute.jsx';
 import AddService from './Component/Dashbord/Admin/AddService/AddService';
 import Service from './Component/Pages/Service/Service.jsx';
 import ServiceDetalis from './Component/Pages/Service/ServiceDetalis';
+import UserProfile from './Component/Dashbord/User/UserProfile';
 
 
 
@@ -63,7 +64,7 @@ const router = createBrowserRouter([
 
 {
   path:  "/lawyers/view/:id",
- element:<PrivateRoute><Details></Details></PrivateRoute> ,
+ element:<PrivateRoute> <Details></Details></PrivateRoute>  ,
  loader: ({params}) => fetch(`http://localhost:5000/lawyers/${params.id}`),
   },
 
@@ -75,7 +76,7 @@ const router = createBrowserRouter([
 
   {
     path:"/services/view/:id",
-   element:<ServiceDetalis></ServiceDetalis> ,
+   element:<PrivateRoute><ServiceDetalis></ServiceDetalis></PrivateRoute> ,
    loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`),
     },
     
@@ -117,10 +118,18 @@ const router = createBrowserRouter([
   path: "LawyerInfo",
   element: <SingleLawyerInfo></SingleLawyerInfo>,
 },
+
+
+
+
+
+//user
+
 {
-  path: "terms",
-  element:<Terms></Terms>
+  path:"userInfo",
+  element:<UserProfile></UserProfile>,
 },
+
 
     ],
   },
