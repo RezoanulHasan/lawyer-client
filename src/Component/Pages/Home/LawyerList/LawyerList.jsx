@@ -6,12 +6,13 @@ import {  Wave } from 'react-animated-text';
 import { Fade } from "react-awesome-reveal";
 import { motion } from "framer-motion";
 import "../../../Shared/Marquee.css"
+import useTitle from '../../../../hooks/useTitle';
 
 const LawyerList = () => {
   const navigate = useNavigate();
   const [lawyers, setLawyers] = useState([]);
   const [categories, setCategories] = useState([]);
-
+  useTitle("lawyer List");
   useEffect(() => {
     // Fetch the lawyers' data from the database
     fetch('http://localhost:5000/lawyers')

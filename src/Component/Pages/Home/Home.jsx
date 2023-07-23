@@ -15,6 +15,7 @@ import CustomerReview from './CustomerReview/CustomerReview';
 import Awards from './Awards/Awards';
 import Banner from './Banner/Banner';
 import Service from '../Service/Service';
+
 const Home = () => {
     useTitle("Home")
 
@@ -32,15 +33,11 @@ const Home = () => {
         await console.log(container);
       }, []);
 
-
-
-      
+   
     return (
-        < >
+  < >
 
-
-        <div  id="top" className='overflow-hidden mt-20 m-5'>
-
+ <div  id="top" className='overflow-hidden mt-20 m-5'>
 <Banner></Banner>
 <div  id="service">
 <Service></Service>
@@ -48,37 +45,21 @@ const Home = () => {
 <div  id="lawyerList">
 <LawyerList></LawyerList>   
 </div>
-
-   <HowWork></HowWork>
-   <KeySuccess></KeySuccess>
-   
-   <AboutUs></AboutUs>
-
-   <div  id="ServicePlan">
-   <ServicePlan></ServicePlan>
-   </div>
+<HowWork></HowWork>
+<KeySuccess></KeySuccess>
+<AboutUs></AboutUs>
+<div  id="ServicePlan">
+<ServicePlan></ServicePlan>
+</div>
 <div id="Contact" >
-   <Contact></Contact>
-   </div>
-
-   <Awards></Awards>
-   <CustomerReview></CustomerReview>
-
-
-<div className="elfsight-app-6f09478f-298e-40d1-8b1c-971e5d56f862"></div>
-
-
-
-
-
-   </div>
-
-
-   <div className="card-actions justify-center mb-3">
+<Contact></Contact>
+</div>
+<Awards></Awards>
+<CustomerReview></CustomerReview>
+ </div>
+ <div className="card-actions justify-center mb-3">
  <Link to="top" smooth={true} duration={1000}><button className="btn btn-outline btn-info  "><FaArrowUp className=''></FaArrowUp></button></Link> </div>            
    
-
-
 {/* for   bg  animation */} 
    <Particles
             id="tsparticles"
@@ -157,7 +138,6 @@ const Home = () => {
                 detectRetina: true,
             }}
         />
-
 
         </>
     );

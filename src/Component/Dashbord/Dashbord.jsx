@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
-import {FaUsers ,FaHome,FaWallet,FaUserEdit,FaUserTie,FaDatabase} from 'react-icons/fa';
+import {FaUsers ,FaHome,FaWallet,FaUserEdit,FaUserTie,FaDatabase,FaBox
+} from 'react-icons/fa';
 import useLawyer from '../../Hooks/useLawyer';
 import useAdmin from './../../Hooks/useAdmin';
 import useAuth from '../../Hooks/useAuth';
@@ -45,6 +46,10 @@ const Dashbord = () => {
      
       <li><Link className='text-red-200  text-xl'  to="/dashboard/services"> 
       <FaDatabase/> Add service </Link></li>
+
+
+      <li><Link className='text-red-200'  to="/dashboard/allBooking"> 
+      <FaBox/> People Booking</Link></li>
 
 </>
 )}
@@ -100,6 +105,11 @@ const Dashbord = () => {
   <FaWallet></FaWallet>My Profile
 </Link>
 </li>
+
+
+<li><Link className='text-red-200  '  to="/dashboard/singleBooking"> 
+      <FaBox/> Booking List</Link></li>
+
 
 <div className="divider bg-white "></div>
               <li>

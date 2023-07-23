@@ -26,6 +26,10 @@ import AddService from './Component/Dashbord/Admin/AddService/AddService';
 import Service from './Component/Pages/Service/Service.jsx';
 import ServiceDetalis from './Component/Pages/Service/ServiceDetalis';
 import UserProfile from './Component/Dashbord/User/UserProfile';
+import Booking from './Component/Dashbord/User/Booking/Booking.jsx';
+import Choose from './Component/Pages/Home/WhyChoseUs/Choose.jsx';
+import ShowSingleBooking from './Component/Dashbord/User/ShowSingleBooking/ShowSingleBooking.jsx';
+import AllBooking from './Component/Dashbord/Admin/AllBooking/AllBooking.jsx';
 
 
 
@@ -54,7 +58,12 @@ const router = createBrowserRouter([
 },
 {
   path: "terms",
-  element:<Terms></Terms>
+  element:<Terms></Terms>,
+},
+
+{
+  path: "choose",
+  element:<Choose></Choose>,
 },
 
 {
@@ -68,6 +77,12 @@ const router = createBrowserRouter([
  loader: ({params}) => fetch(`http://localhost:5000/lawyers/${params.id}`),
   },
 
+
+{
+  path:  "/lawyers/booking/:id",
+ element:<Booking></Booking>,
+ loader: ({params}) => fetch(`http://localhost:5000/lawyers/${params.id}`),
+  },
 
 {
   path: "services",
@@ -104,7 +119,10 @@ const router = createBrowserRouter([
   element: <AddService></AddService>,
 },
 
-
+{
+  path: "allBooking",
+  element: <AllBooking></AllBooking>,
+},
 
 
 
@@ -128,6 +146,11 @@ const router = createBrowserRouter([
 {
   path:"userInfo",
   element:<UserProfile></UserProfile>,
+},
+
+{
+  path:"singleBooking",
+  element:<ShowSingleBooking></ShowSingleBooking>,
 },
 
 

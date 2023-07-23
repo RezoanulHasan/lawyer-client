@@ -1,9 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-
+import {  FaUserTie,FaDatabase} from 'react-icons/fa';
 const Footer = () => {
-
 
 
   return (
@@ -17,20 +16,25 @@ const Footer = () => {
               </div>
             </label>
             <div className="flex justify-between gap-20">
-              <p className="font-bold  text-xl text-red-100">Lawyer Hiring </p>
-              <p className="font-bold   text-yellow-200 ">
+              <p  style={{textShadow: '0 0 3px #FF0000,0 0 4px #FF0000 '}}  className="font-bold  text-white  text-xl">Lawyer Hiring </p>
+              <p style={{textShadow: '0 0 3px #FF0000,0 0 4px #FF0000 '}} className="font-bold   text-yellow-200 ">
                 Copyright © 2023 - All right reserved by Rezoanul Hasan ,BSc in(CSE)
               </p>
 
             </div>
           </div>
 
-          <div  className='flex'>
-            <Link className=" text-white   text-xl font-bold "  to="/services" >
-  Our  Services  </Link> 
+
+ 
+          <div  className='flex gap-5 '>
+     <Link  style={{textShadow: '0 0 3px #FF0000,0 0 4px #FF0000 '}}  
+     className=" text-green-200 text-xl  card-title "  to="/services" >
+            <FaDatabase></FaDatabase> Our Services  </Link> 
 
 
-<Link  className="font-bold text-xl  text-white " to="/lawyers" >Our Lawyers</Link> 
+<Link  style={{textShadow: '0 0 3px #FF0000,0 0 4px #FF0000 '}} 
+ className=" text-xl  text-blue-200 card-title" to="/lawyers" > 
+ <FaUserTie></FaUserTie> Our Lawyers</Link> 
 
 
             </div>

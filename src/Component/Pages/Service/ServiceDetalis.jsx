@@ -4,8 +4,9 @@ import { motion } from "framer-motion";
 import { Fade } from "react-awesome-reveal";
 import Lottie from 'lottie-react';
 import law from '../../../assets/law.json'
+import useTitle from '../../../hooks/useTitle';
 const ServiceDetalis = () => {
-
+  useTitle("Service detail's");
   const navigate = useNavigate();
   const  Services= useLoaderData();
 

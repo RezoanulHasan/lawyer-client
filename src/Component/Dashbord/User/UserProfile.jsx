@@ -1,9 +1,10 @@
 import React from 'react';
 import useAuth from '../../../Hooks/useAuth';
 import {FcBusinessContact ,FcFeedback} from "react-icons/fc";
+import useTitle from '../../../hooks/useTitle';
 const UserProfile = () => {
     const { user} = useAuth();   
-
+    useTitle("User Profile"); 
     return (
         <div>
 

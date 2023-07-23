@@ -1,12 +1,17 @@
-import { useParams, useNavigate, useLoaderData } from 'react-router-dom';
+import {  useNavigate, useLoaderData, Link } from 'react-router-dom';
 import { motion } from "framer-motion";
 import { Fade } from "react-awesome-reveal";
 import {  Wave } from 'react-animated-text';
 import Marquee from "react-fast-marquee";
+import useTitle from '../../../../hooks/useTitle';
 const LawyerDetails = () => {
-  const { _id } = useParams();
+  useTitle("Lawyer detail's");
   const navigate = useNavigate();
   const  Lawyers= useLoaderData();
+
+  const handleBooking = (_id) => {
+    navigate(`/lawyers/booking/${_id}`);
+  };
 
   const handleBack = () => {
     navigate(-1);
@@ -14,7 +19,10 @@ const LawyerDetails = () => {
 
  
 
-  const { name, category, details,photo,cases,price,experience,time,email,eduction} = Lawyers ;
+  const { name, category, details,photo,cases,price,experience,time,email,eduction,
+    
+    _id }
+   = Lawyers ;
 
   return (
     <div className='m-5 mt-20'>
@@ -155,17 +163,17 @@ const LawyerDetails = () => {
    <div className="card-body lg:m-20 m-1   bg-gray-700  shadow-xl    text-white">
 
    <div className=' gap-10  '>
-                   <div className='flex text-red-200  lg:flex-row  md:flex-row   flex-col gap-0 lg:gap-5 md:gap-5' >
-                <p className='card-title   '>Solving:-{cases}cases + </p>
-              <p className="card-title" >Experience: {experience}
-                         years</p>
+                   <div className=' text-red-200  lg:flex-row  md:flex-row   flex-col gap-0 lg:gap-5 md:gap-5' >
+                <p className='card-title   '>Solving-cases:   {cases}+ </p>
+              <p className="card-title" >Experience:     {experience}
+                         yr+</p>
                          </div>
 
                          </div>
                          <div className=' gap-10  '>
                         
-                         <p className="card-title" >Phone:-01423456987
-                         </p>
+                        
+             
                          </div>
        <div className='flex gap-10 text-green-500 '>
                          <p className="card-title  " >Eduction : {eduction}</p>
@@ -180,14 +188,39 @@ const LawyerDetails = () => {
                        </Fade>   
 
 
+    
+                       <div className='card-actions justify-center mt-5 lg:mt-0'>
 
+           <Link to="https://www.google.com/maps/dir/%E0%A6%9F%E0%A6%BF%E0%A6%8F%E0%A6%AE%E0%A6%8F%E0%A6%B8%E0%A6%8F%E0%A6%B8+%E0%A6%AB%E0%A6%BE%E0%A6%89%E0%A6%A8%E0%A7%8D%E0%A6%A1%E0%A7%87%E0%A6%B6%E0%A6%A8+%E0%A6%85%E0%A6%AB%E0%A6%BF%E0%A6%B8,+Bogra+-+Rangpur+Hwy,+Gokul/Judge+Court,+Bogura/@24.8752054,89.3251,11239m/data=!3m2!1e3!4b1!4m14!4m13!1m5!1m1!1s0x39fcff7dc233b713:0xae4db9e1cb64272a!2m2!1d89.3552512!2d24.9048655!1m5!1m1!1s0x39fc552b7541a7fd:0xf97071f072c51fd4!2m2!1d89.3761175!2d24.846855!3e0?entry=ttu" >           
+  <div className="grid w-40 h-40 rounded bg-primary text-primary-content place-content-center font-bold"> OFFICE <br />Google map</div> </Link>  
+
+  <div className="grid w-40 h-40 rounded bg-accent text-accent-content place-content-center font-bold  ">PHONE <br />  01423456987 </div> 
+  </div>
+
+  <div className='card-actions justify-center mt-5 '>
+
+
+
+  <button    className="grid w-40 h-40 rounded bg-black
+ 
+  text-secondary-content  btn btn-outline place-content-center font-bold "
+  
+  onClick={() => handleBooking(_id)} 
+  
+  >Booking
+  <br />  NOW
+  
+   </button> 
+
+
+  
+   </div>
+
+   
                         
    <div className="card-actions justify-center">
       <button  className="btn mt-10 btn-outline btn-warning" onClick={handleBack}>Go Back</button>   
       </div>
-
-
-     
       </div>
 
 

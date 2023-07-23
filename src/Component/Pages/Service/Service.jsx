@@ -3,10 +3,11 @@ import { useNavigate } from 'react-router-dom';
 import { Wave } from 'react-animated-text';
 import { Fade } from "react-awesome-reveal";
 import { motion } from "framer-motion";
+import useTitle from '../../../hooks/useTitle';
 const Service = () => {
   const navigate = useNavigate();
   const [services, setServices] = useState([]);
-
+  useTitle("Services");
   useEffect(() => {
     // Fetch the services' data from the database
     fetch('http://localhost:5000/services')
