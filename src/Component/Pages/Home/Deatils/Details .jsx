@@ -4,7 +4,12 @@ import { Fade } from "react-awesome-reveal";
 import {  Wave } from 'react-animated-text';
 import Marquee from "react-fast-marquee";
 import useTitle from '../../../../hooks/useTitle';
+import { useEffect } from 'react';
 const LawyerDetails = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+}, []);
+
   useTitle("Lawyer detail's");
   const navigate = useNavigate();
   const  Lawyers= useLoaderData();
@@ -35,7 +40,8 @@ const LawyerDetails = () => {
 
 
         <Fade direction="up">  
-<div className='card-actions  mt-6  justify-center'>
+<div className='card-actions  mt-10
+  justify-center'>
 
 
         <div className="card   bg-gray-600 w-96 shadow-xl">

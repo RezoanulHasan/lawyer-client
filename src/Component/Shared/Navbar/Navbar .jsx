@@ -59,29 +59,15 @@ const Navbar = () => {
                 </span>
             </li>
             :
-
-            <button   className='btn btn-outline text-white hover:btn' > 
-            <li className="  font-bold "><ActiveLink to="/login"><FaInnosoft></FaInnosoft>Login</ActiveLink></li></button>    
+<ActiveLink to="/login">
+   <button   className='btn btn-outline text-white hover:btn' > 
+    <li className="  font-bold "><FaInnosoft></FaInnosoft>Login</li></button>
+     </ActiveLink>   
             }
-          
-
-
-
-
+    
     </ul>
 
-
-
-
-
-
-
-
-
-
-
-
-    </div>
+</div>
     <Fade direction="right">
     <div className='bg-black flex'>
     <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
@@ -135,8 +121,12 @@ const Navbar = () => {
             </li>
             :
 
-            <button   className='btn  btn-outline btn-info' > 
-            <li className="  font-bold "><ActiveLink to="/login"><FaInnosoft></FaInnosoft>Login</ActiveLink></li></button>    
+        <ActiveLink to="/login">
+         <button   className='btn btn-outline  btn-info' > 
+       <li className="  font-bold "><FaInnosoft></FaInnosoft>Login</li></button>
+         </ActiveLink>
+            
+            
             }
           
 

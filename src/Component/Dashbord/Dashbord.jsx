@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
-import {FaUsers ,FaHome,FaWallet,FaUserEdit,FaUserTie,FaDatabase,FaBox
+import {FaUsers ,FaHome,FaWallet,FaUserEdit,FaUserTie,FaDatabase,FaBox,FaDelicious
 } from 'react-icons/fa';
 import useLawyer from '../../Hooks/useLawyer';
 import useAdmin from './../../Hooks/useAdmin';
@@ -29,7 +29,7 @@ const Dashbord = () => {
   </div> 
   <div className="drawer-side">
     <label htmlFor="my-drawer-2" className="drawer-overlay"></label> 
-    <ul className="menu p-4 w-80 h-full bg-black text-base-content">
+    <ul className="menu p-4  w-80 h-full bg-black text-base-content">
       {/* Sidebar content here */}
     
 
@@ -41,15 +41,19 @@ const Dashbord = () => {
                
                 </div>
 
-              <li><Link className='text-red-200  text-xl'  to="/dashboard/allUser"> 
+              <li><Link className='text-red-200  '  to="/dashboard/allUser"> 
       <FaUsers/> All Users</Link></li>
      
-      <li><Link className='text-red-200  text-xl'  to="/dashboard/services"> 
+      <li><Link className='text-red-200  '  to="/dashboard/services"> 
       <FaDatabase/> Add service </Link></li>
 
 
       <li><Link className='text-red-200'  to="/dashboard/allBooking"> 
       <FaBox/> People Booking</Link></li>
+
+      <li><Link className='text-red-200'  to="/dashboard/showService"> 
+      <FaDelicious/>All service </Link></li>
+
 
 </>
 )}
@@ -65,8 +69,6 @@ const Dashbord = () => {
   
   <li><Link className='text-red-200  '  to="/dashboard/addLawyerInfo"> 
       <FaUserEdit/>Add Lawyer info </Link></li>
-
-     
 
             </>
           )}    
@@ -89,8 +91,13 @@ const Dashbord = () => {
 <li > 
 <Link  className='text-red-200 ' to="/lawyers"  >< FaUserTie></FaUserTie>Our Lawyers</Link> </li>
 
-              </li>
 
+
+              </li>
+           
+
+
+         
 </>
 ) : 
 <>
@@ -126,6 +133,10 @@ const Dashbord = () => {
 
 <li > 
 <Link  className='text-red-200 ' to="/lawyers"  >< FaUserTie></FaUserTie>Our Lawyers</Link> </li>
+
+
+
+
 
 
 

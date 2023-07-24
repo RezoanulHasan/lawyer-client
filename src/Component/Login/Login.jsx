@@ -31,23 +31,22 @@ const Login = () => {
   const emailRef = useRef();
   const from = location.state?.from?.pathname || '/';
 
+
   const handleLogin = handleSubmit(async (data) => {
     const { email, password } = data;
     try {
-
-    
-     const result = await signIn(email, password);
+      const result = await signIn(email, password);
       const loggedUser = result.user;
       console.log(loggedUser);
       reset();
       target.reset();
-      navigate(from, { replace: true });
+      navigate(from, { replace: true }); 
       toast.success('Sign In successfully. Welcome!', {
-        position: toast.POSITION.TOP_CENTER
+        position: toast.POSITION.TOP_CENTER,
       });
- // Reset ReCAPTCHA value
-    setRecaptchaValue('');
-    navigate(from, { replace: true });
+   
+      //  Reset ReCAPTCHA value
+      setRecaptchaValue('');
 
     } catch (error) {
       console.log(error);
@@ -60,6 +59,9 @@ const Login = () => {
       }
     }
   });
+  
+
+
 
 
   // google recaptcha
@@ -152,7 +154,7 @@ const Login = () => {
 <div className='lg:mt-20 md:mt-20 mt-0'>
 
 <Fade direction="down" >  
-<Lottie  className='login-red'      animationData={loginred} loop={true} />
+<Lottie  className='login-red' animationData={loginred} loop={true} />
 </Fade>
 </div>
 
@@ -207,10 +209,7 @@ const Login = () => {
   />
 
 </div>
-   
-
-
-          <div className="flex justify-between items-center mb-4">
+      <div className="flex justify-between items-center mb-4">
             <button
               type="button"
               onClick={handleResetPassword}
@@ -256,7 +255,7 @@ const Login = () => {
      
     </div>
     </Fade>
-    <ToastContainer />
+    <ToastContainer position="top-center"/>
     </div>
 
     </>

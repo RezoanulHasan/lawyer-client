@@ -28,12 +28,12 @@ const AllBooking = () => {
             {/* head */}
             <thead>
                 <tr className='text-white text-xl'>
-                    <th>Num</th>
-                    <th>Lawyer-Img</th>
-                    <th> Lawyer Name</th>
-                    <th>Category</th>
-                    <th>User-Img</th>
-                    <th> User-name</th>
+                    <th className="py-2 px-4" >Num</th>
+                    <th className="py-2 px-4" >Lawyer-Img</th>
+                    <th className="py-2 px-4" > Lawyer Name</th>
+                    <th  className="py-2 px-4">Category</th>
+                    <th className="py-2 px-4" >User-Img</th>
+                    <th  className="py-2 px-4"> User-name</th>
            
                  
              
@@ -41,27 +41,26 @@ const AllBooking = () => {
             </thead>
             <tbody>
                 {
-                    bookings.map((item, index) => <tr
-                        key={item._id}
-                    >
-         <td className='text-white font-bold'>
+                    bookings.map((item, index) => 
+                    <tr className="border border-gray-300" key={item._id}>
+         <td className='text-white font-bold py-2 px-4 '>
              {index + 1}
              </td>
-             <td>
+             <td className=' py-2 px-4' >
             <div className="avatar">
                  <div className="mask mask-squircle w-12 h-12">
                  <img src={item.photo} alt="Avatar Tailwind CSS Component" />
                          </div>
                             </div>
                         </td>
-                        <td className='text-red-200'>
+                        <td className='text-red-200 py-2 px-4'>
                             {item.name}
                         </td>
-                        <td className='text-white'>
+                        <td className='text-white py-2 px-4'>
                             {item.category}
                         </td>
 
-                        <td>
+                        <td className=' py-2 px-4' >
                          <div className="avatar">
                                 <div className="mask mask-squircle w-12 h-12">
                                     <img src={item.userPhoto} alt="Avatar Tailwind CSS Component" />
@@ -69,7 +68,7 @@ const AllBooking = () => {
                             </div>
                         </td>
 
-                        <td className='text-red-200'>
+                        <td className='text-red-200 py-2 px-4'>
                             {item.username}
                         
                         </td>

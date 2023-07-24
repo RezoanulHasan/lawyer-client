@@ -4,10 +4,13 @@ import { Wave } from 'react-animated-text';
 import { Fade } from "react-awesome-reveal";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRecycle, faPodcast, faUserCircle, faUsers, faWindowRestore, faBookmark } from '@fortawesome/free-solid-svg-icons';
+import { useEffect } from 'react';
 
 
 const Choose = () => {
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+}, []); 
 
     return (
 

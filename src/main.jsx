@@ -21,7 +21,6 @@ import AddLawyerInfo from './Component/Dashbord/Lawyer/AddLawyerInfo.jsx';
 import SingleLawyerInfo from './Component/Dashbord/Lawyer/SingleLawyerInfo.jsx';
 import LawyerList from './Component/Pages/Home/LawyerList/LawyerList.jsx';
 import Details from './Component/Pages/Home/Deatils/Details .jsx';
-import PrivateRoute from './privetroutes/PrivateRoute.jsx';
 import AddService from './Component/Dashbord/Admin/AddService/AddService';
 import Service from './Component/Pages/Service/Service.jsx';
 import ServiceDetalis from './Component/Pages/Service/ServiceDetalis';
@@ -30,13 +29,12 @@ import Booking from './Component/Dashbord/User/Booking/Booking.jsx';
 import Choose from './Component/Pages/Home/WhyChoseUs/Choose.jsx';
 import ShowSingleBooking from './Component/Dashbord/User/ShowSingleBooking/ShowSingleBooking.jsx';
 import AllBooking from './Component/Dashbord/Admin/AllBooking/AllBooking.jsx';
-
-
-
+import Privet from './Route/Privet.jsx';
+import ShowService from './Component/Dashbord/Admin/ShowService/ShowService.jsx';
+import Update from './Component/Dashbord/Lawyer/Update.jsx';
 
 
 const queryClient = new QueryClient()
-
 const router = createBrowserRouter([
   {
     path: "/",
@@ -73,7 +71,7 @@ const router = createBrowserRouter([
 
 {
   path:  "/lawyers/view/:id",
- element:<PrivateRoute> <Details></Details></PrivateRoute>  ,
+ element:<Privet><Details></Details></Privet> ,
  loader: ({params}) => fetch(`http://localhost:5000/lawyers/${params.id}`),
   },
 
@@ -91,7 +89,7 @@ const router = createBrowserRouter([
 
   {
     path:"/services/view/:id",
-   element:<PrivateRoute><ServiceDetalis></ServiceDetalis></PrivateRoute> ,
+   element:<Privet><ServiceDetalis></ServiceDetalis></Privet> ,
    loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`),
     },
     
@@ -118,6 +116,10 @@ const router = createBrowserRouter([
   path: "services",
   element: <AddService></AddService>,
 },
+{
+  path: "showService",
+  element:<ShowService></ShowService>,
+},
 
 {
   path: "allBooking",
@@ -137,7 +139,11 @@ const router = createBrowserRouter([
   element: <SingleLawyerInfo></SingleLawyerInfo>,
 },
 
-
+{
+  path:  "update/:id",
+ element:<Update></Update> ,
+ loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`),
+  },
 
 
 

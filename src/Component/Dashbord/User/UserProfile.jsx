@@ -17,7 +17,7 @@ const UserProfile = () => {
         <h1 className='card-title text-bold text-yellow-500  text-2xl'><FcBusinessContact></FcBusinessContact>Name :{user?.displayName} </h1>
         <h1  className='card-title  font-bold text-xl'><FcFeedback></FcFeedback>
 Email: {user?.email} </h1>
-        <h1  className='font-bold text-green-300 text-xl'>{user?.phone} </h1>
+        <h1  className='font-bold text-green-300 text-xl'>{user?.phoneNumber}</h1>
         </div>
 
         </div>

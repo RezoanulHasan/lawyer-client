@@ -5,8 +5,13 @@ import { Fade } from "react-awesome-reveal";
 import Lottie from 'lottie-react';
 import law from '../../../assets/law.json'
 import useTitle from '../../../hooks/useTitle';
+import { useEffect } from 'react';
 const ServiceDetalis = () => {
   useTitle("Service detail's");
+  useEffect(() => {
+    window.scrollTo(0, 0);
+}, []);
+ 
   const navigate = useNavigate();
   const  Services= useLoaderData();
 
@@ -21,7 +26,7 @@ const ServiceDetalis = () => {
     <div className='m-5 mt-20'>
       
       <h1 className='mt-20' > .</h1>
-      <div className="card-actions justify-center">
+      <div className="card-actions mt-10 justify-center">
 
       <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }} >     
     <figure>  <img  className='lg:w-96 w-80 h-72 ' src={photo}alt="Service" />     </figure >

@@ -21,7 +21,7 @@ const Booking = () => {
 const formRef = useRef(null);
     useTitle("Booking"); 
     const  Lawyers= useLoaderData();
-    const { _id, name, category, photo, price, experience, email:lawyerEmail } = Lawyers;
+    const { _id, name, category,time, photo, price, experience, email:lawyerEmail } = Lawyers;
     const [isBooked, setIsBooked] = useState(false); 
 
     const navigate = useNavigate();
@@ -164,7 +164,7 @@ const formRef = useRef(null);
               </div>
               <div className="form-control md:w-1/2 lg:ml-4">
                 <label className="label">
-        <span className="label-text text-yellow-400">Set time 10am - 6pm </span>
+        <span className="label-text text-yellow-400">Set time-  ({time} )</span>
                 </label>
                 <label className="input-group">
                   <input
