@@ -46,7 +46,7 @@ const AddLawyerInfo = () => {
 
 
   // send data to the server
-  fetch('http://localhost:5000/lawyers', {
+  fetch('https://lawyer-hiring.vercel.app/lawyers', {
     method: 'POST',
     headers: {
       'content-type': 'application/json',

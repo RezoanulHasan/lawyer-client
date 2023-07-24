@@ -4,6 +4,7 @@ import { Fade } from "react-awesome-reveal";
 import Lottie from 'lottie-react';
 import lawyers from '../../../../assets/lawyers.json'
 import { Link } from 'react-router-dom';
+import {FcBullish} from "react-icons/fc";
 const Banner = () => {
     return (
         <>
@@ -46,11 +47,22 @@ const Banner = () => {
 <Fade direction="down"> 
 <h1 className=' text-white bg-black front-bold font-mono mt-5'>Our lawyer hiring website, LawLink, is a comprehensive platform that connects individuals and businesses with top-notch legal professionals. With a user-friendly interface and a vast network of skilled attorneys, we streamline the process of finding and hiring the perfect lawyer for every legal need.</h1>
 </Fade>
+<Fade direction="left"> 
+<div className="card-actions mt-5 lg:justify-end  md:justify-end">
+<Link  to="">
+<button className='btn  text-4xl  text-black btn-outline'> <FcBullish></FcBullish></button>
+</Link>
+</div>
+
+
 <div className="card-actions mt-5 lg:justify-end  md:justify-end">
 <Link  to="/choose">
 <button className='btn   btn-info btn-outline'> Why choose US  </button>
 </Link>
 </div>
+</Fade> 
+
+
 </div>
 
 

@@ -19,7 +19,7 @@ const Contact = () => {
     const contact  = { name, email, textarea , phone };
     console.log(contact );
 
-    fetch('http://localhost:5000/contacts', {
+    fetch('https://lawyer-hiring.vercel.app/contacts', {
         method: 'POST',
         headers: {
           'content-type': 'application/json'

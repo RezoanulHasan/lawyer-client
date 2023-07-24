@@ -40,11 +40,10 @@ const Login = () => {
       console.log(loggedUser);
       reset();
       target.reset();
-      navigate(from, { replace: true }); 
+      navigate(from, { replace: true })
       toast.success('Sign In successfully. Welcome!', {
-        position: toast.POSITION.TOP_CENTER,
-      });
-   
+        position: toast.POSITION.TOP_CENTER,     
+       });
       //  Reset ReCAPTCHA value
       setRecaptchaValue('');
 
@@ -61,17 +60,11 @@ const Login = () => {
   });
   
 
-
-
-
   // google recaptcha
   const handleRecaptchaChange = (value) => {   
     setRecaptchaValue(value);
   };
  
-
-
-
   const handleResetPassword = () => {
     const email = emailRef.current.value;
     if (!email) {
@@ -98,7 +91,7 @@ const Login = () => {
       .then(result => {
         const loggedUser = result.user;
         const saveUser = { name: loggedUser.displayName, email: loggedUser.email };
-        fetch('http://localhost:5000/users', {
+        fetch('https://lawyer-hiring.vercel.app/users', {
           method: 'POST',
           headers: {
             'content-type': 'application/json'
@@ -123,7 +116,7 @@ const Login = () => {
       .then(result => {
         const loggedUser = result.user;
         const saveUser = { name: loggedUser.displayName, email: loggedUser.email };
-        fetch('http://localhost:5000/users', {
+        fetch('https://lawyer-hiring.vercel.app/users', {
           method: 'POST',
           headers: {
             'content-type': 'application/json'

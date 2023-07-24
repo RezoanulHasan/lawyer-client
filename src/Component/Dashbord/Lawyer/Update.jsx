@@ -39,7 +39,7 @@ const Update = () => { // Destructure "match" prop to get URL parameters
 
     console.log(updateLawyer);
   
-        const url = `http://localhost:5000/lawyers/${_id}`;
+        const url = `https://lawyer-hiring.vercel.app/lawyers/${_id}`;
         fetch(url, {
           method: 'PUT',
           headers: {

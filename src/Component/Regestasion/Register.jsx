@@ -61,7 +61,7 @@ const Register = () => {
         photo: data.photoURL.trim(),
         phone: data.phone.trim(),
       };
-      const response = await fetch("http://localhost:5000/users", {
+      const response = await fetch("https://lawyer-hiring.vercel.app/users", {
         method: "POST",
         headers: {
           "content-type": "application/json",

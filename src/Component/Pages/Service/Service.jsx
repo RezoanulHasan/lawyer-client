@@ -10,7 +10,7 @@ const Service = () => {
   useTitle("Services");
   useEffect(() => {
     // Fetch the services' data from the database
-    fetch('http://localhost:5000/services')
+    fetch('https://lawyer-hiring.vercel.app/services')
       .then((response) => response.json())
       .then((data) => {
         setServices(data);
@@ -25,15 +25,15 @@ const Service = () => {
   };
 
   return (
-    <div className='m-5 mb-20 mt-10'>
+    <div className='m-5 mb-20 mt-20'>
         <Fade direction="left" > 
-      <div  style={{textShadow: '0 0 3px #FF0000,0 0 4px #FF0000 '}}   className="text-white     hero-overlay  font-bold text-3xl mt-10 text-center">
+      <div  style={{textShadow: '0 0 3px #FF0000,0 0 4px #FF0000 '}}   className="text-white mb-15  mt-20  hero-overlay  font-bold text-3xl text-center">
         <Wave text="Our Service"   effect="stretch" effectChange={2} />
       
       </div>
       </Fade> 
       <Fade direction="right" > 
-      <div className="grid  mt-10 gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3  ">      
+      <div className="grid  mt-20 gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3  ">      
         {services.map((service) => (
           <div key={service._id} className="card  rotate-12  h-full bg-black shadow-xl">
              <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }} >     

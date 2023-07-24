@@ -76,7 +76,7 @@ const Navbar = () => {
                 </div>
               </label>
            
-    <p style={{  }}  className=" text-3xl text-red-500 ">Lawyer<span className='text-blue-700'></span> <span className='text-blue-700'>Haring</span></p>
+    <p style={{  }}  className=" text-3xl text-red-500 ">Lawyer<span className='text-blue-700'></span> <span className='text-blue-700'>Hiring</span></p>
    
     </div>
     </Fade>

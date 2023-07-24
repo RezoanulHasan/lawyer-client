@@ -8,7 +8,7 @@ const AllBooking = () => {
 
     useTitle("All-Bookings");
     const [bookings, setBookings] = useState([]); // Change 'booking' to 'bookings' for consistency
-    const url = "http://localhost:5000/bookings";
+    const url = "https://lawyer-hiring.vercel.app/bookings";
     useEffect(() => {
       fetch(url)
         .then((res) => res.json())

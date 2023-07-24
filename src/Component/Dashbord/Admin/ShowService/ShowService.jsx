@@ -8,7 +8,7 @@ import Swal from 'sweetalert2';
 const ShowService = () => {
   useTitle("All-Service");
   const [services, setServices] = useState([]);
-  const url = "http://localhost:5000/services";
+  const url = "https://lawyer-hiring.vercel.app/services";
 
   useEffect(() => {
     fetch(url)
@@ -38,7 +38,7 @@ const ShowService = () => {
       cancelButtonText: 'Cancel'
     }).then(result => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/services/${item._id}`, {
+        fetch(`https://lawyer-hiring.vercel.app/services/${item._id}`, {
           method: 'DELETE'
         })
           .then(res => res.json())

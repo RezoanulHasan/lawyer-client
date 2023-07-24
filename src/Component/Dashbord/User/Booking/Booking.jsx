@@ -31,7 +31,7 @@ const formRef = useRef(null);
   
     useEffect(() => {
       // Fetch the user's bookings from the server here
-      fetch('http://localhost:5000/bookings') // Replace the URL with the actual endpoint to fetch user bookings
+      fetch('https://lawyer-hiring.vercel.app/bookings') // Replace the URL with the actual endpoint to fetch user bookings
         .then((res) => res.json())
         .then((data) => {
           // Assuming data is an array of lawyer IDs that the user has booked
@@ -71,7 +71,7 @@ const formRef = useRef(null);
     
  
   // send data to the server
-  fetch('http://localhost:5000/bookings', {
+  fetch('https://lawyer-hiring.vercel.app/bookings', {
     method: 'POST',
     headers: {
       'content-type': 'application/json',

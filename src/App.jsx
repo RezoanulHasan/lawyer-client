@@ -11,12 +11,12 @@ const App = () => {
     <div className=' overflow-hidden '>
 
  <Navbar></Navbar>
-      <div
+     
+ <div
         className="bg-cover shadow bg-center bg-fixed"
         style={{
           backgroundImage: 'url(https://wallpaperaccess.com/full/5432655.png)',
-        }}> 
-        
+        }}>  
 
         <div>{navigation.state === 'loading' && <Spinner />}</div>
       
@@ -27,8 +27,8 @@ const App = () => {
         </div>
        
     <Footer></Footer> </div>
-      </div>
-
+  
+</div>
   );
 };
 

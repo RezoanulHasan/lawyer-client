@@ -15,7 +15,7 @@ const LawyerList = () => {
   useTitle("lawyer List");
   useEffect(() => {
     // Fetch the lawyers' data from the database
-    fetch('http://localhost:5000/lawyers')
+    fetch('https://lawyer-hiring.vercel.app/lawyers')
       .then((response) => response.json())
       .then((data) => {
         setLawyers(data);

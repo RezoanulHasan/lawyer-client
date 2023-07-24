@@ -6,7 +6,7 @@ import { loadFull } from "tsparticles";
 import { useCallback } from "react";
 import KeySuccess from './Key to success/KeySuccess';
 import Contact from './Contact/Contact';
-import AboutUs from '../AnoutUs/AboutUs';
+import AboutUs from '../AboutUs/AboutUs';
 import { Link } from 'react-scroll';
 import {FaArrowUp} from 'react-icons/fa';
 import LawyerList from './LawyerList/LawyerList';
@@ -15,6 +15,7 @@ import CustomerReview from './CustomerReview/CustomerReview';
 import Awards from './Awards/Awards';
 import Banner from './Banner/Banner';
 import Service from '../Service/Service';
+import Features from './Features/Features';
 
 const Home = () => {
     useTitle("Home")
@@ -39,6 +40,7 @@ const Home = () => {
 
  <div  id="top" className='overflow-hidden mt-20 m-5'>
 <Banner></Banner>
+<Features></Features>
 <div  id="service">
 <Service></Service>
 </div>
@@ -60,7 +62,7 @@ const Home = () => {
  <div className="card-actions justify-center mb-3">
  <Link to="top" smooth={true} duration={1000}><button className="btn btn-outline btn-info  "><FaArrowUp className=''></FaArrowUp></button></Link> </div>            
    
-{/* for   bg  animation */} 
+{/* for    bg  animation */} 
    <Particles
             id="tsparticles"
             init={particlesInit}
@@ -137,7 +139,7 @@ const Home = () => {
                 },
                 detectRetina: true,
             }}
-        />
+        />   
 
         </>
     );

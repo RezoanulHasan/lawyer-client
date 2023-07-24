@@ -34,6 +34,7 @@ import ShowService from './Component/Dashbord/Admin/ShowService/ShowService.jsx'
 import Update from './Component/Dashbord/Lawyer/Update.jsx';
 
 
+
 const queryClient = new QueryClient()
 const router = createBrowserRouter([
   {
@@ -64,6 +65,8 @@ const router = createBrowserRouter([
   element:<Choose></Choose>,
 },
 
+
+
 {
   path: "lawyers",
   element:<LawyerList></LawyerList>,
@@ -72,14 +75,14 @@ const router = createBrowserRouter([
 {
   path:  "/lawyers/view/:id",
  element:<Privet><Details></Details></Privet> ,
- loader: ({params}) => fetch(`http://localhost:5000/lawyers/${params.id}`),
+ loader: ({params}) => fetch(`https://lawyer-hiring.vercel.app/lawyers/${params.id}`),
   },
 
 
 {
   path:  "/lawyers/booking/:id",
  element:<Booking></Booking>,
- loader: ({params}) => fetch(`http://localhost:5000/lawyers/${params.id}`),
+ loader: ({params}) => fetch(`https://lawyer-hiring.vercel.app/lawyers/${params.id}`),
   },
 
 {
@@ -90,7 +93,7 @@ const router = createBrowserRouter([
   {
     path:"/services/view/:id",
    element:<Privet><ServiceDetalis></ServiceDetalis></Privet> ,
-   loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`),
+   loader: ({params}) => fetch(`https://lawyer-hiring.vercel.app/services/${params.id}`),
     },
     
   
@@ -142,7 +145,7 @@ const router = createBrowserRouter([
 {
   path:  "update/:id",
  element:<Update></Update> ,
- loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`),
+ loader: ({params}) => fetch(`https://lawyer-hiring.vercel.app/services/${params.id}`),
   },
 
 
