@@ -2,7 +2,7 @@
 #  Lawyer hiring
 Welcome to Lawyer hiring website
 
-# [Live Website]( https:https://lawyer-hiring-bcca9.web.app/)
+# [Live Website](https://lawyer-hiring-bcca9.web.app/)
 # [server git link ](https://github.com/RezoanulHasan/lawyer-server)
 
 ## Features
